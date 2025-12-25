@@ -1,15 +1,77 @@
-# simple-java-maven-app
+# 🚀 Java Maven CI Pipeline with Jenkins
 
-This repository is for the
-[Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
-tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
+This repository contains a **Java Maven application integrated with a Jenkins CI pipeline**.
+The project demonstrates how to automate build and test processes using Jenkins
+whenever code is pushed to GitHub.
 
-The repository contains a simple Java application which outputs the string
-"Hello world!" and is accompanied by a couple of unit tests to check that the
-main application works as expected. The results of these tests are saved to a
-JUnit XML report.
+This is a hands-on DevOps project focused on **Continuous Integration (CI)** best practices.
 
-The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
-you'll be creating yourself during the tutorial and the `jenkins/scripts` subdirectory
-contains a shell script with commands that are executed when Jenkins processes
-the "Deliver" stage of your Pipeline.
+---
+
+## 🔧 Tech Stack
+- Java
+- Maven
+- Jenkins
+- GitHub
+- JUnit
+
+---
+
+## 📦 Project Overview
+The application is a simple Java program that prints **"Hello World!"**
+and includes unit tests to verify application behavior.
+
+The Jenkins pipeline automatically:
+- Pulls source code from GitHub
+- Builds the application using Maven
+- Runs unit tests
+- Generates test reports
+
+---
+
+## 🔄 CI Pipeline Flow
+
+```text
+GitHub Commit
+     ↓
+Jenkins Trigger
+     ↓
+Maven Build
+     ↓
+Unit Tests
+     ↓
+Build Status Report
+
+▶️ How to Run Locally
+
+Make sure Java and Maven are installed:
+
+mvn clean package
+
+
+Run the application:
+
+java -jar target/*.jar
+
+📊 Test Reports
+
+JUnit test results are generated automatically during the Jenkins build
+and can be viewed directly in the Jenkins dashboard.
+
+🎯 Learning Outcomes
+
+Creating Jenkins pipelines using Jenkinsfile
+
+Automating Maven builds
+
+Running unit tests in CI
+
+Understanding CI workflows in real-world DevOps environments
+
+📌 Future Improvements
+
+Add Docker build stage
+
+Integrate SonarQube for code quality
+
+Extend CI to full CI/CD with deployment
